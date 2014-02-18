@@ -18,7 +18,7 @@ library("fdrtool")
 
 mainDir <- "/home/ntyet/research/modelselection2" # linux
 # mainDir <- "P:/research/modelselection2" # Windows
-pbeta1 <- "pbeta_1"
+pbeta1 <- "pbeta_0"
 dir.create(file.path(mainDir, pbeta1), showWarnings = FALSE)
 sources <- "sources"
 dir.create(file.path(mainDir, sources), showWarnings = FALSE)
@@ -572,7 +572,7 @@ sd.res.fdp.true <- array(0, dim=c(length(p.beta), length(i.beta), length(S), len
 ##############
 # i <- 5; j <- 1;k <- 1; l <- 2; m <- 1
 
-for(i in 5){
+for(i in 1){
   for(j in 1:length(i.beta)){
     for(k in 1:length(S)){
       for(l in 1:length(U)){
@@ -689,7 +689,7 @@ save(sd.res.fdp.true, file = paste(dir.pbeta1, "/sd.res.fdp.true.RData", sep = "
 
 
 # auc of those methods: 
-i <- 5
+i <- 1
 
 
 ind <- expand.grid(j = c(1,2), k = c(1,2), l = c(1,2))
